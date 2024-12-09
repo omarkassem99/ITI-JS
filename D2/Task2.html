@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <ul>
+          <li><a href="Task1.html">Task 1</a></li>
+          <li><a href="Task2.html">Task 2</a></li>
+          <li><a href="Task3.html">Task 3</a></li>
+          <li><a href="Task4.html">task 4</a></li>
+          <li><a href="Task5.html">task 5</a></li>
+          <li><a href="Task6.html">task 6</a></li>
+      </ul>
+  </p>
+  
+    <script>
+
+      function largesWord(text) 
+      {
+
+        let newText = text.split(" ");
+        let largest = newText[0];
+
+        for (let index = 1; index < newText.length; index++) {
+          if (newText[index].length > largest.length) {
+            largest = newText[index];
+          }
+        }
+        console.log("Largest Word is: " + largest);
+      }
+
+
+      largesWord(prompt("Enter Your Sentence"))
+    </script>
+  </body>
+</html>

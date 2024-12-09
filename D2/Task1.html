@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <ul>
+            <li><a href="Task1.html">Task 1</a></li>
+            <li><a href="Task2.html">Task 2</a></li>
+            <li><a href="Task3.html">Task 3</a></li>
+            <li><a href="Task4.html">task 4</a></li>
+            <li><a href="Task5.html">task 5</a></li>
+            <li><a href="Task6.html">task 6</a></li>
+        </ul>
+    </p>
+    
+    <script>
+        const nameFormat =  /^[A-Za-z]+$/;
+        const phFormat = /^[0-9]{8}$/;
+        const mobFormat = /^01[012]\d{8}$/;
+        const emailFormat = /^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+        const colors = ['red','blue','green']
+
+        do {
+            var name = prompt("Please Enter Your Name")
+        } while (! name.match(nameFormat));
+
+        do {
+            var phone = prompt("Please Enter Your Phone")
+        } while (! phone.match(phFormat));
+
+        do {
+            var mobile = prompt("Please Enter Your Mobile")
+        } while (! mobile.match(mobFormat));
+
+        do {
+            var email = prompt("Please Enter Your Email")
+        } while (! email.match(emailFormat));
+
+        do {
+            var textColor = prompt("Enter The Color (Red, Blue, Green)")
+        } while (! colors.includes(textColor));
+
+        
+        document.write(`
+        <p> <span> Welcome Dear Guest </span> ${name} </p>   
+        <p> <span> Your Phone is </span>${phone}</p>
+        <p> <span> Your Mobile is</span> ${mobile} </p>
+        <p> <span> Your Email Address is</span> ${email} </p>
+        `)
+        
+        let span = document.getElementsByTagName("span")
+        for (let i = 0; i < p.length; i++) {
+            span[i].style.color = textColor;   
+        }
+
+
+
+
+    </script>
+</body>
+</html>
