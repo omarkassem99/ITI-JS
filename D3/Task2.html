@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data Table </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .get-by-id {
+            margin-bottom: 20px;
+        }
+
+        .get-by-id input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .get-by-id button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Data Table</h1>
+
+    <div class="get-by-id">
+        <label for="databyid">Enter ID: </label>
+        <input type="number" id="databyid" placeholder="Enter ID">
+        <button onclick="GetDataBYID()">Get Data By ID</button>
+    </div>
+
+    <div class="result">
+        <p><strong>Title:</strong> <span id="title"></span></p>
+        <p><strong>Body:</strong> <span id="body"></span></p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+            
+        </tbody>
+    </table>
+
+
+    <script src="Task2.js"></script>
+</body>
+</html>
